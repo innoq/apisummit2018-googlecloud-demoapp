@@ -2,14 +2,14 @@
 
 ### Dieses Repository beinhaltet eine kleine golang todo app, Konfigurationsdateien und Beispiele für den Google Cloud Workshop
 
-* Cloud Shell  
+### Cloud Shell  
   In dieser Demo erkunden wir die Google Cloud Shell, starten eine VM und deployen die Demo app
  * clonen Sie das Repo der todo App: `git clone https://github.com/innoq/apisummit2018-googlecloud-demoapp`
  * starten Sie die Cloud Shell und bauen Sie die Demo mit `go build`. 
  * staten Sie die App mit `./todo`
  * Testen Sie den HTTP-Zugriff mit [Web Preview](https://cloud.google.com/shell/docs/using-web-preview)
 
-* Compute Engine  
+### Compute Engine  
   wir testen `./todo` auf einer VM
   * starten Sie eine VM unter [Compute Engine / VM instances](https://console.cloud.google.com/compute/instances)
   * übertragen Sie `./todo` mit `gcloud compute scp`
@@ -17,7 +17,7 @@
   * Konfigurieren sie die [Firewall](https://console.cloud.google.com/networking/firewalls) für Port 80
   * Testen Sie den HTTP-Zugriff
   
-* Kubernetes Engine  
+### Kubernetes Engine  
   Wir erstellen ein Docker Image, und installieren dieses in Kubernetes
  * Starten Sie einen [Cluster](https://console.cloud.google.com/kubernetes)
  * machen Sie sich mit den Kubernetes-Konzepten:
@@ -33,10 +33,7 @@
  * Die IP Adresse des Loadbalancers können Sie mit `kubectl get ing` ermitteln.
  * Testen Sie den HTTP-Zugriff
  
-* Cloud Storage
-* Cloud SQL
-
-* Cloud Funktions
+### Cloud Funktions
   Wir erstellen zwei Cloud Functions, eine für das automatische Erstellen von Thumbnails in Cloud Storage und eine HTTP Funktion zum umwandeln von Markdown in HTML
   * [Erstellen Sie einen Bucket in Cloud Storage](https://console.cloud.google.com/storage/create-bucket)
   * im Ordner cloudfunctions/imagemagic können Sie die Funktion mit  
@@ -48,7 +45,7 @@
 * Testen Sie die Konvertierung mit:  
   `curl -sF'doc=@test.md' [URL] `
   
-* Cloud Build 
+### Cloud Build 
   Wir bauen todo in Cloud Build und deployen in Kubernetes
  * Repository anlegen auf der Kommandozeile: `gcloud source repos create todo` 
  * fügen Sie das gcloud Repo als Remote hinzu: `git remote add gcloud <URL>` (Die Rek-Url können Sie mit `gcloud source repos list` ermitteln)
@@ -59,7 +56,7 @@
  
 
 
-# todo build 
+### todo build 
 
 ```
 go build

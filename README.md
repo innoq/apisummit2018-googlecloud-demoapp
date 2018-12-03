@@ -39,7 +39,10 @@
   * im Ordner cloudfunctions/imagemagic können Sie die Funktion mit  
     `gcloud functions deploy resize_image --trigger-bucket=gs://$TEST_BUCKET/ --runtime python37` installieren 
   * laden Sie ein beliebiges Bild hoch und testen Sie das Ergebnis im Cloud Storage Browser
-* Für die `markdown_to_html` Demo benötigen Sie das [pandoc binary](https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-linux.tar.gz)
+* Für die `markdown_to_html` Demo benötigen Sie das [pandoc binary](https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-linux.tar.gz)  
+  `curl -Lo pandoc.tar.gz https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-linux.tar.gz`  
+  `tar -zxvf pandoc.tar.gz  pandoc-2.5/bin/pandoc  --strip-components=2`  
+  `rm ./pandoc.tar.gz`
 * wenn sie `pandoc` extrahiert haben können Sie die Funktion mit `gcloud functions deploy markdown_to_html --runtime python37 --trigger-http` installieren
 * in der Ausgabe finden Sie nun die URL ihrer Funktion
 * Testen Sie die Konvertierung mit:  
